@@ -1,7 +1,10 @@
 import React from "react";
 import { LuMail } from "react-icons/lu";
 import { TbApiApp } from "react-icons/tb";
-//import CountUp from 'react-countup/build/CountUp'
+import { IoLogoGithub } from "react-icons/io";
+import { FaLinkedin, FaFacebook, FaInstagramSquare } from "react-icons/fa";
+import heroImage from "../images/heroImage.jpg";
+import CountUp from "react-countup";
 
 export default function Hero() {
   return (
@@ -43,18 +46,100 @@ export default function Hero() {
                 See portfolio
               </a>
             </div>
-              <p
-                data-aos="fade-left"
-                data-aos-duration="1500"
-                className="flex gap-2 text-headingColor mt-14 font-[500] text-[15px] leading-7 sm:pl-14 sm:pr-10"
-              >
-              <span className="mt-2"><TbApiApp className="w-6 h-6"/></span>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
-                ea earum consequuntur deleniti impedit laboriosam accusamus
-                facilis amet? Rem, magnam.
-              </p>
+            <p
+              data-aos="fade-left"
+              data-aos-duration="1500"
+              className="flex gap-2 text-headingColor mt-14 font-[500] text-[15px] leading-7 sm:pl-14 sm:pr-10"
+            >
+              <span className="mt-2">
+                <TbApiApp className="w-6 h-6" />
+              </span>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim ea
+              earum consequuntur deleniti impedit laboriosam accusamus facilis
+              amet? Rem, magnam.
+            </p>
+            <div className="flex items-center gap-9 mt-14">
+              <span className="text-smallTextColor text-[15px] font-[600]">
+                Follow me :{" "}
+              </span>
+              <span>
+                <a
+                  href="#github"
+                  className="text-smallTextColor text-[18px] font-[600]"
+                >
+                  <IoLogoGithub className="w-6 h-6" />
+                </a>
+              </span>
+              <span>
+                <a
+                  href="#linkedIn"
+                  className="text-smallTextColor text-[18px] font-[600]"
+                >
+                  <FaLinkedin className="w-6 h-6" />
+                </a>
+              </span>
+              <span>
+                <a
+                  href="#facebook"
+                  className="text-smallTextColor text-[18px] font-[600]"
+                >
+                  <FaFacebook className="w-6 h-6" />
+                </a>
+              </span>
+              <span>
+                <a
+                  href="#instagram"
+                  className="text-smallTextColor text-[18px] font-[600]"
+                >
+                  <FaInstagramSquare className="w-7 h-7" />
+                </a>
+              </span>
+            </div>
           </div>
           {/* end hero left content */}
+          {/* hero image */}
+          <div className="basis-1/3 mt-10 sm:mt-0">
+            <figure className="flex items-center ">
+              <img className="w-[250px] h-[500px]" src={heroImage} alt="" />
+            </figure>
+          </div>
+          {/* end hero image */}
+          {/* hero content right */}
+          <div className="md:basis-1/5 flex justify-between text-center mt-10 flex-wrap gap-3 md:mt-0 md:flex-col md:justify-end md:text-end">
+            <div className="mb-10">
+              <h2 className="text-headingColor text-[32px] font-[700]">
+                <CountUp start={0} end={1} duration={2} suffix="+" />
+              </h2>
+              <h4 className="text-headingColor text-[18px] font-[600]">
+                Years of experience
+              </h4>
+            </div>
+            <div className="mb-10">
+              <h2 className="text-headingColor text-[32px] font-[700]">
+                <CountUp start={0} end={100} duration={2} suffix="%" />
+              </h2>
+              <h4 className="text-headingColor text-[18px] font-[600]">
+                Success Rate
+              </h4>
+            </div>
+            <div className="mb-10">
+              <h2 className="text-headingColor text-[32px] font-[700]">
+                <CountUp start={0} end={150} duration={2} suffix="+" />
+              </h2>
+              <h4 className="text-headingColor text-[18px] font-[600]">
+                Happy Clients
+              </h4>
+            </div>
+            <div className="mb-10">
+              <h2 className="text-headingColor text-[32px] font-[700]">
+                <CountUp start={0} end={5} duration={2} suffix="+" />
+              </h2>
+              <h4 className="text-headingColor text-[18px] font-[600]">
+                Projects Completed
+              </h4>
+            </div>
+          </div>
+          {/* end hero content right */}
         </div>
       </div>
     </section>
