@@ -1,4 +1,6 @@
 import React from 'react'
+import { AiOutlineDingtalk } from "react-icons/ai";
+import { IoMenu } from "react-icons/io5";
 
 export default function header() {
   return (
@@ -12,11 +14,32 @@ export default function header() {
               </span>
               <div className="leading-[20px] ">
                 <h2 className="text-xl text-smallTextColor font-[700]">Thilina</h2>
-                <p className="text-smallTextColor text-[18px] font-[500]">Personal</p>
+                <p className="text-smallTextColor text-[14px] font-[500]">personal</p>
               </div>
             </div>
             {/* end logo */}
 
+            {/* menu */}
+            <div className="menu">
+              <ul className='flex items-center gap-10'>
+                <li className='text-smallTextColor font-[600]'><a href="#about">About</a></li>
+                <li className='text-smallTextColor font-[600]'><a href="#service">Service</a></li>
+                <li className='text-smallTextColor font-[600]'><a href="#portfolio">Portfolio</a></li>
+                <li className='text-smallTextColor font-[600]'><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+            {/* end menu */}
+            
+            {/* menu right */}
+            <div className="flex items-center gap-4">
+              <button className='flex items-center gap-2 tea=xt-smallTextColor text-[600] border-2 border-solid border-smallTextColor py-2 px-4 rounded-[8px] max-h-[40px] hover:bg-smallTextColor hover:text-white hover:font-[500] ease-in duration-300'>
+              <AiOutlineDingtalk className='w-7 h-7'/> Lets talk
+              </button>
+              <span className="text-2xl text-smallTextColor  cursor-pointer">
+              <IoMenu />
+              </span>
+            </div>
+            {/* end menu right */}
         </div>
       </div>
     </div>
