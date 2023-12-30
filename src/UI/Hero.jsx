@@ -100,7 +100,7 @@ export default function Hero() {
           {/* hero image */}
           <div className="basis-1/3 mt-10 sm:mt-0">
             <figure className="flex items-center ">
-              <img className="w-[250px] h-[500px]" src={heroImage} alt="" />
+              <img className="w-[500px] h-[380px]" src={heroImage} alt="" />
             </figure>
           </div>
           {/* end hero image */}

@@ -6,6 +6,7 @@ import './App.css';
 import Header from './components/header';
 import Footer from './components/footer';
 import Hero from './UI/Hero';
+import Services from './UI/Services';
 
 function App() {
   useEffect(()=>{
@@ -16,6 +17,7 @@ function App() {
     <div className="App">
       <Header />
       <Hero />
+      <Services />
       <Footer />
     </div>
   );
