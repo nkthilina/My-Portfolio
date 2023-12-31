@@ -3,7 +3,9 @@ import { LuMail } from "react-icons/lu";
 import { TbApiApp } from "react-icons/tb";
 import { IoLogoGithub } from "react-icons/io";
 import { FaLinkedin, FaFacebook, FaInstagramSquare } from "react-icons/fa";
-import heroImage from "../images/heroImage.jpg";
+//import heroImage from "../images/heroImage.jpg";
+//import ThilinaLeonardo from "../images/Thilina_Leonardo_Diffusion_XL.jpg"
+import Thilina from "../images/Leonardo_Diffusion_XL_Handsome_t.jpg"
 import CountUp from "react-countup";
 
 export default function Hero() {
@@ -100,7 +102,7 @@ export default function Hero() {
           {/* hero image */}
           <div className="basis-1/3 mt-10 sm:mt-0">
             <figure className="flex items-center ">
-              <img className="w-[500px] h-[380px]" src={heroImage} alt="" />
+              <img className="w-[350px] h-[450px]" src={Thilina} alt="" />
             </figure>
           </div>
           {/* end hero image */}
