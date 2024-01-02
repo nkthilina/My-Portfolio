@@ -1,10 +1,28 @@
-import React from 'react'
+import React, { useRef, useEffect} from 'react'
 import { AiOutlineDingtalk } from "react-icons/ai";
 import { IoMenu } from "react-icons/io5";
 
-export default function header() {
+export default function Header() {
+  const headerRef = useRef(null)
+
+  const stickyHeaderFunction = () => {
+    window.addEventListener('scroll', () => {
+      if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        headerRef.current.classList.add('sticky_header')
+      }
+      else{
+        headerRef.current.classList.remove('sticky_header')
+      }
+    })
+  }
+
+  useEffect(() => {
+    stickyHeaderFunction()
+    return window.removeEventListener('scroll', stickyHeaderFunction)
+  },[])
+
   return (
-    <div className='w-full h-[80px] leading-[80px] flex items-center'>
+    <div ref={headerRef} className='w-full h-[80px] leading-[80px] flex items-center'>
       <div className="container">
         <div className="flex items-center justify-between">
             {/* logo */}
