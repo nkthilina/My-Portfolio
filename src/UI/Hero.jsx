@@ -3,8 +3,6 @@ import { LuMail } from "react-icons/lu";
 import { TbApiApp } from "react-icons/tb";
 import { IoLogoGithub } from "react-icons/io";
 import { FaLinkedin, FaFacebook, FaInstagramSquare } from "react-icons/fa";
-//import heroImage from "../images/heroImage.jpg";
-//import ThilinaLeonardo from "../images/Thilina_Leonardo_Diffusion_XL.jpg"
 import Thilina from "../images/Leonardo_Diffusion_XL_Handsome_t.jpg"
 import CountUp from "react-countup";
 
@@ -69,7 +67,7 @@ export default function Hero() {
                   href="#github"
                   className="text-smallTextColor text-[18px] font-[600]"
                 >
-                  <IoLogoGithub className="w-6 h-6" />
+                  <IoLogoGithub className="w-8 h-8" />
                 </a>
               </span>
               <span>
@@ -77,7 +75,7 @@ export default function Hero() {
                   href="#linkedIn"
                   className="text-smallTextColor text-[18px] font-[600]"
                 >
-                  <FaLinkedin className="w-6 h-6" />
+                  <FaLinkedin className="w-7 h-7" />
                 </a>
               </span>
               <span>
@@ -85,7 +83,7 @@ export default function Hero() {
                   href="#facebook"
                   className="text-smallTextColor text-[18px] font-[600]"
                 >
-                  <FaFacebook className="w-6 h-6" />
+                  <FaFacebook className="w-7 h-7" />
                 </a>
               </span>
               <span>
@@ -93,7 +91,7 @@ export default function Hero() {
                   href="#instagram"
                   className="text-smallTextColor text-[18px] font-[600]"
                 >
-                  <FaInstagramSquare className="w-7 h-7" />
+                  <FaInstagramSquare className="w-8 h-8" />
                 </a>
               </span>
             </div>

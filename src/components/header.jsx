@@ -4,6 +4,7 @@ import { IoMenu } from "react-icons/io5";
 
 export default function Header() {
   const headerRef = useRef(null)
+  const menuRef = useRef(null)
 
   const stickyHeaderFunction = () => {
     window.addEventListener('scroll', () => {
@@ -21,17 +22,20 @@ export default function Header() {
     return window.removeEventListener('scroll', stickyHeaderFunction)
   },[])
 
-  const handleClick = e => {
+  const handleClick = (e) => {
     e.preventDefault();
 
-    const targetAttr = e.target.getAttribute("href");
+    const targetAttr = e.target.getAttribute('href');
     const location = document.querySelector(targetAttr).offsetTop;
 
     window.scrollTo({
       top: location - 80,
       left: 0,
+      behavior: 'smooth',
     })
   }
+
+  const toggleMenu = () => menuRef.current.classList.toggle('show_menu')
 
   return (
     <div ref={headerRef} className='w-full h-[80px] leading-[80px] flex items-center'>
@@ -50,10 +54,10 @@ export default function Header() {
             {/* end logo */}
 
             {/* menu */}
-            <div className="menu">
+            <div className="menu" ref={menuRef} onClick={toggleMenu}>
               <ul className='flex items-center gap-10'>
                 <li onClick={handleClick} className='text-smallTextColor font-[600]'><a href="#about">About</a></li>
-                <li onClick={handleClick} className='text-smallTextColor font-[600]'><a href="#service">Service</a></li>
+                <li onClick={handleClick} className='text-smallTextColor font-[600]'><a href="#services">Services</a></li>
                 <li onClick={handleClick} className='text-smallTextColor font-[600]'><a href="#portfolio">Portfolio</a></li>
                 <li onClick={handleClick} className='text-smallTextColor font-[600]'><a href="#contact">Contact</a></li>
               </ul>
@@ -65,7 +69,7 @@ export default function Header() {
               <button className='flex items-center gap-2 tea=xt-smallTextColor text-[600] border-2 border-solid border-smallTextColor py-2 px-4 rounded-[8px] max-h-[40px] hover:bg-smallTextColor hover:text-white hover:font-[500] ease-in duration-300'>
               <AiOutlineDingtalk className='w-7 h-7'/> Lets talk
               </button>
-              <span className="text-2xl text-smallTextColor  cursor-pointer">
+              <span onClick={toggleMenu} className="text-2xl md:hidden text-smallTextColor  cursor-pointer">
               <IoMenu />
               </span>
             </div>
