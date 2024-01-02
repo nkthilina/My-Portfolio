@@ -21,6 +21,18 @@ export default function Header() {
     return window.removeEventListener('scroll', stickyHeaderFunction)
   },[])
 
+  const handleClick = e => {
+    e.preventDefault();
+
+    const targetAttr = e.target.getAttribute("href");
+    const location = document.querySelector(targetAttr).offsetTop;
+
+    window.scrollTo({
+      top: location - 80,
+      left: 0,
+    })
+  }
+
   return (
     <div ref={headerRef} className='w-full h-[80px] leading-[80px] flex items-center'>
       <div className="container">
@@ -40,10 +52,10 @@ export default function Header() {
             {/* menu */}
             <div className="menu">
               <ul className='flex items-center gap-10'>
-                <li className='text-smallTextColor font-[600]'><a href="#about">About</a></li>
-                <li className='text-smallTextColor font-[600]'><a href="#service">Service</a></li>
-                <li className='text-smallTextColor font-[600]'><a href="#portfolio">Portfolio</a></li>
-                <li className='text-smallTextColor font-[600]'><a href="#contact">Contact</a></li>
+                <li onClick={handleClick} className='text-smallTextColor font-[600]'><a href="#about">About</a></li>
+                <li onClick={handleClick} className='text-smallTextColor font-[600]'><a href="#service">Service</a></li>
+                <li onClick={handleClick} className='text-smallTextColor font-[600]'><a href="#portfolio">Portfolio</a></li>
+                <li onClick={handleClick} className='text-smallTextColor font-[600]'><a href="#contact">Contact</a></li>
               </ul>
             </div>
             {/* end menu */}
