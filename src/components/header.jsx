@@ -38,7 +38,7 @@ export default function Header() {
   const toggleMenu = () => menuRef.current.classList.toggle('show_menu')
 
   return (
-    <div ref={headerRef} className='w-full h-[80px] leading-[80px] flex items-center'>
+    <div ref={headerRef} className='w-full h-[80px] leading-[80px] flex items-center z-10'>
       <div className="container">
         <div className="flex items-center justify-between">
             {/* logo */}

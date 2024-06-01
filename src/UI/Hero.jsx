@@ -3,7 +3,7 @@ import { LuMail } from "react-icons/lu";
 import { TbApiApp } from "react-icons/tb";
 import { IoLogoGithub } from "react-icons/io";
 import { FaLinkedin, FaFacebook, FaInstagramSquare } from "react-icons/fa";
-import Thilina from "../images/Leonardo_Diffusion_XL_Handsome_t.jpg"
+import Thilina from "../images/Leonardo_Diffusion_XL_Handsome_t.jpg";
 import CountUp from "react-countup";
 
 export default function Hero() {
@@ -25,7 +25,7 @@ export default function Hero() {
               data-aos="fade-up"
               data-aos-duration="1500"
             >
-              I'm Thilina Madhusanka <br /> Software Developer
+              I'm Thilina Madhusanka <br /> Software Engineer
             </h1>
             <div
               className="flex items-center gap-6 mt-7"
@@ -97,6 +97,7 @@ export default function Hero() {
             </div>
           </div>
           {/* end hero left content */}
+
           {/* hero image */}
           <div className="basis-1/3 mt-10 sm:mt-0">
             <figure className="flex items-center ">
@@ -104,6 +105,7 @@ export default function Hero() {
             </figure>
           </div>
           {/* end hero image */}
+
           {/* hero content right */}
           <div className="md:basis-1/5 flex justify-between text-center mt-10 flex-wrap gap-3 md:mt-0 md:flex-col md:justify-end md:text-end">
             <div className="mb-10">
@@ -124,7 +126,7 @@ export default function Hero() {
             </div>
             <div className="mb-10">
               <h2 className="text-headingColor text-[32px] font-[700]">
-                <CountUp start={0} end={150} duration={2} suffix="+" />
+                <CountUp start={0} end={2} duration={2} suffix="+" />
               </h2>
               <h4 className="text-headingColor text-[18px] font-[600]">
                 Happy Clients
@@ -132,7 +134,7 @@ export default function Hero() {
             </div>
             <div className="mb-10">
               <h2 className="text-headingColor text-[32px] font-[700]">
-                <CountUp start={0} end={5} duration={2} suffix="+" />
+                <CountUp start={0} end={4} duration={2} suffix="+" />
               </h2>
               <h4 className="text-headingColor text-[18px] font-[600]">
                 Projects Completed
